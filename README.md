@@ -46,3 +46,8 @@ There are several methods to traverse a binary tree:
 - **Full Binary Tree:** A binary tree in which every node has either 0 or 2 children.
 - **Perfect Binary Tree:** A binary tree in which all internal nodes have exactly two children, and all leaf nodes are at the same level.
 - **Balanced Binary Tree:** A binary tree in which the height of the left and right subtrees of any node differs by at most one.
+
+## Authors
+
+-   [Shaza Ali](https://github.com/shazaaly)
+-   [Mounssif Bouhlaoui](https://github.com/nuuxcode)
