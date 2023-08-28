@@ -10,6 +10,7 @@ int main(void)
 {
 	binary_tree_t *root;
 	size_t height;
+
 	root = binary_tree_node(NULL, 98);
 	root->left = binary_tree_node(root, 12);
 	root->right = binary_tree_node(root, 402);
@@ -25,5 +26,5 @@ int main(void)
 	return (0);
 }
 /*
-gcc -Wall -Wextra -Werror -pedantic binary_tree_print.c 9-binary_tree_height.c 9-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 9-height
+gcc binary_tree_print.c 9-binary_tree_height.c 9-main.c 0-binary_tree_node.c 2-binary_tree_insert_right.c -o 9-height && 9-height.exe
 */
