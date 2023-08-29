@@ -3,7 +3,8 @@
  * binary_tree_is_full -  creates a binary tree node.
  *
  * @tree: pointer to the parent node of the node to create.
- * Dscription: A full binary tree is a tree in which every node has either 0 or 2 children.
+ * Dscription: A full binary tree is a tree in which
+ *  every node has either 0 or 2 children.
  *  In other words, every node is either a leaf or has two children.
  * Return: pointer to the new node, or NULL on failure
  */

@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 /**
- * binary_tree_insert_right -  creates a binary tree node.
+ * binary_tree_delete -  creates a binary tree node.
  *
  * @tree: tree root.
  *
