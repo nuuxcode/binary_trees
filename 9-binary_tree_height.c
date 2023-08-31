@@ -1,34 +1,26 @@
 #include "binary_trees.h"
 /**
- * binary_tree_sibling -  creates a binary tree node.
+ * binary_tree_height -  creates a binary tree node.
  *
- * @node: pointer to the parent node of the node to create.
- * Dscription:A perfect binary tree is a tree in which all interior
- * nodes have two children and all leaves are at the same level.
+ * @tree: pointer to the parent node of the node to create.
+ *
  * Return: pointer to the new node, or NULL on failure
  */
-binary_tree_t *binary_tree_sibling(binary_tree_t *node)
+size_t binary_tree_height(const binary_tree_t *tree)
 {
-	if (!node || !node->parent || !node->parent->left || !node->parent->right)
-		return (NULL);
+	size_t right = 0, left = 0;
 
-	if (node == node->parent->left)
-		return (node->parent->right);
+	if (!tree)
+		return (0);
+
+	if (tree->right)
+		right = 1 + binary_tree_height(tree->right);
+
+	if (tree->left)
+		left = 1 + binary_tree_height(tree->left);
+
+	if (right > left)
+		return (right);
 	else
-		return (node->parent->left);
-}
-/**
- * binary_tree_uncle -  creates a binary tree node.
- *
- * @node: pointer to the parent node of the node to create.
- * Dscription:A perfect binary tree is a tree in which all interior
- * nodes have two children and all leaves are at the same level.
- * Return: pointer to the new node, or NULL on failure
- */
-binary_tree_t *binary_tree_uncle(binary_tree_t *node)
-{
-	if (!node)
-		return (NULL);
-
-	return (binary_tree_sibling(node->parent));
+		return (left);
 }
